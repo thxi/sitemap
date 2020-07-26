@@ -39,3 +39,11 @@ defer r.Close()
 
 All Fetch(...) methods will return `FetchError` if something goes wrong.
 The error can be unwrapped for inspection by using `errors.Unwrap(err)`
+
+Parse the sitemap (or the sitemapindex)
+
+```go
+s, err := ParseSitemap(r)
+// or
+si, err := ParseSitemapIndex(r)
+```
