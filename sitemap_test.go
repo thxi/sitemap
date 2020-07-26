@@ -7,7 +7,7 @@ import (
 
 func TestParseSitemapIndex(t *testing.T) {
 	r := strings.NewReader(sitemapindex)
-	idx, err := ParseSitemapIndex(r)
+	_, err := ParseSitemapIndex(r)
 	if err != nil {
 		t.Fatalf("expected no error, got: %v", err)
 	}
